@@ -1,0 +1,73 @@
+<p>employee works!</p>
+
+<div>
+    <b>Interpolation</b>
+    <p>Name of Person is : {{name}}</p>
+    <p>Age of Person is : {{age}}</p>
+</div>
+
+<div>
+    <b>Property Binding</b>
+    <br>
+    <img [src]="image" alt="bird" width="300" height="200">
+    <br>
+</div>
+
+<div>
+    <b>Event Binding</b>
+    <br>
+    <button (click)="welcomeMessage()">Click Me</button>
+    <br>
+    <br>
+</div>
+
+
+<div>
+    <b>Toggle using if</b>
+    <br>
+    <button (click)="toggleStatus()">Click Change</button>
+    <br>
+    @if(isActive){
+    <div>This is True</div>
+    }
+    <br>
+</div>
+
+<div>
+    <b>Using For</b>
+    @for(Employee of employees; track Employee){
+    <div>{{Employee}}</div>
+    }
+    <br>
+</div>
+
+<div>
+    <b>Build a dynamic list with *ngFor and conditional rendering with *ngIf.</b>
+
+    @for (manager of managers; track manager) {
+
+    <div>
+        <p>Name: {{ manager.name }}</p>
+        <p>Age: {{ manager.age }}</p>
+
+        @if (manager.isActive) {
+        <p>Status: Active</p>
+        } @else {
+        <p>Status: Inactive</p>
+        }
+
+        <hr>
+    </div>
+
+    }
+</div>
+
+<div>
+    <h2>Without Pipe</h2>
+
+    <p>{{ word }}</p>
+
+    <h2>With Custom Pipe</h2>
+
+    <p>{{ word | capitalize }}</p>
+</div>
