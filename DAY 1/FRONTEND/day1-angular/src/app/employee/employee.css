@@ -1,0 +1,8 @@
+.bold{
+    font-weight: 900;
+    font-size: large;
+}
+
+.active{
+    color: red;
+}

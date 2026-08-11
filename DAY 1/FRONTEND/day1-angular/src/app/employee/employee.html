@@ -1,0 +1,45 @@
+<p>employee works!</p>
+
+<!-- Data Binding =>    1. Interpolation
+                        2. Property Binding
+                        3. Event Binding
+                        4. Two way Data Binding
+-->
+
+<p class="bold">Using Interpolation</p>
+<p>My name is = {{name}}</p>
+<p>My age is = {{age}}</p>
+
+<p class="bold">Using Property Binding</p>
+<img [src]="imageUrl" alt="image">
+
+
+<br>
+<p class="bold">Using Event Binding</p>
+<button (click)="sayHello()">
+    Click Me
+</button>
+
+<br>
+<p class="bold">Using Two Way Data Binding</p>
+<input type="text" [(ngModel)]="company" placeholder="Enter Company Name"> 
+<p>Welcome to {{company}}</p>
+
+<!-- Directive -->
+
+<!--    1. Attribute Directive => a. ngClass    b. ngStyle
+        2. Structural Directive => a. @if       b. @for
+-->
+
+<br>
+<p class="bold">Directive</p>
+<p [ngClass]="{'active' : isActive}">Employee</p>
+
+<br>
+
+<h2 appHighlight>
+    Hover over me
+</h2>
+
+<br>
+

@@ -1,0 +1,31 @@
+<h1>Employee Management</h1>
+
+<label>Employee Id:</label>
+
+<!-- Take id -->
+<input  type="number" [(ngModel)]="empId">
+
+<br><br>
+
+<label>Name:</label>
+
+<!-- Take  name-->
+<input [(ngModel)]="empName">
+
+<br><br>
+
+<button (click)="addEmployee()">
+    Add Employee
+</button>
+
+<hr>
+
+<h2>Employees</h2>
+
+@for (employee of employees; track employee.empId) {
+
+    <div>
+        {{employee.empId}} - {{employee.empName}}
+    </div>
+
+}
